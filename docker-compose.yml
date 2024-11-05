@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  all:
+    build: .
+    ports:
+      - '8081:8081' # React Dashboard app
+      - '8082:8082' # Angular Admin app
+      - '3000:3000' # json-server for the Admn app
+      - '3001:3001' # Proxy server for the React app
+    restart: always
